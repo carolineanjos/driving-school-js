@@ -1,7 +1,46 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  /* padding: 2rem; */
+  /* text-align: center; */
+
 }
 
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tabs-container {
+  /* margin:20px; */
+}
+
+.tabs-content {
+  margin: 20px;
+  font-size: 16px;
+  border: none;
+
+  background-color: #fff;
+  cursor: pointer;
+  
+}
+
+.tabs-content:hover{
+  color: blue;
+}
+
+
+img {
+  height: 80px;
+  width: 80px;
+  margin: 20px;
+}
