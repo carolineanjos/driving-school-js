@@ -15,7 +15,7 @@ export const StudentsList = ({ students }) => {
             <ol>
                 {students?.map((item) => (
                     <li className='list-item' key={item?.id}>
-                        <Link to={`students/${item?.id}`}> {item?.name}</Link>
+                        <Link to={`/students/:${item?.id}`}> {item?.name}</Link>
                     </li>
                 ))}
             </ol>

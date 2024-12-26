@@ -19,6 +19,19 @@ const students = [
   { id: 10, name: "Larissa Costa", type: "A" }
 ];
 
+const classes = [
+  { id: 1, name: "Aula 1", status: "Concluído" },
+  { id: 2, name: "Aula 2", status: "Não iniciada" },
+  { id: 3, name: "Aula 3", status: "Concluído" },
+  { id: 4, name: "Aula 4", status: "Em andamento" },
+  { id: 5, name: "Aula 5", status: "Em andamento" },
+  { id: 6, name: "Aula 6", status: "Não iniciada" },
+  { id: 7, name: "Aula 7", status: "Não iniciada" },
+  { id: 8, name: "Aula 8", status: "Não iniciada" },
+  { id: 9, name: "Aula 9", status: "Em andamento" },
+  { id: 10, name: "Aula 10", status: "Concluído" },
+];
+
 function App() {
 
   const studentRegister = () => {
@@ -45,9 +58,9 @@ function App() {
 
       <Routes>
         <Route path='/students' element={<StudentsList students={students} />} />
-        <Route path='/classes' element={<Classes />} />
+        <Route path='/classes' element={<Classes classes={classes} />} />
         <Route path='/general-status' element={<GeneralStatus />} />
-        <Route path='/students/:id' element={<IndividualStatusTable />} />
+        <Route path={`/students/:${students?.id}`} element={<IndividualStatusTable classes={classes} />} />
       </Routes>
     </Router>
   );

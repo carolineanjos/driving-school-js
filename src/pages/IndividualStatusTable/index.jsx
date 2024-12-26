@@ -4,13 +4,20 @@ export const IndividualStatusTable = ({ classes, students }) => {
         <div>
             <h1>{students?.name}</h1>
             <table>
-                <tr>
-                    <th>Aulas</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    {classes?.map((item) => <td>{item}</td>)}
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Aulas</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {classes?.map((item, index) => (
+                        <tr key={index}>
+                            <td>{item?.name}</td>
+                            <td>{item?.status}</td>
+                        </tr>
+                    ))}
+                </tbody>
             </table>
         </div>
     );
