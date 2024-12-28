@@ -13,6 +13,10 @@
     color: blue
   }
 
+  .list-item {
+    color: #000
+  }
+
   .list-item:hover {
     cursor: pointer;
   }
