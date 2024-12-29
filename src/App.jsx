@@ -19,14 +19,12 @@ function App() {
         <div className='tabs-container'>
           <Link to='/students' className='tabs-content'>Alunos</Link>
           <Link to='/classes' className='tabs-content'>Aulas</Link>
-          <Link to='/general-status' className='tabs-content'>Status Geral</Link>
         </div>
       </div>
 
       <Routes>
         <Route path='/students' element={<StudentsList />} />
         <Route path='/classes' element={<Classes />} />
-        <Route path='/general-status' element={<GeneralStatus />} />
         <Route path={`/students/:studentId`} element={<IndividualStatusTable />} />
       </Routes>
     </Router>
