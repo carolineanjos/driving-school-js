@@ -27,7 +27,7 @@ function App() {
         <Route path='/students' element={<StudentsList />} />
         <Route path='/classes' element={<Classes />} />
         <Route path='/general-status' element={<GeneralStatus />} />
-        <Route path={`/students/:${students?.id}`} element={<IndividualStatusTable />} />
+        <Route path={`/students/:studentId`} element={<IndividualStatusTable />} />
       </Routes>
     </Router>
   );
